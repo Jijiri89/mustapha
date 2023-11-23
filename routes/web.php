@@ -3,8 +3,9 @@
 use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Home;
 
-Route::get('/',\App\Livewire\Home::class)->name('home');
+Route::get('/',Home::class)->name('home');
 
 
 
