@@ -45,7 +45,10 @@ class DepositorResource extends Resource
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('paid')
+                    ->default(0)
+                    ->label('Amount to pay in GHS')
                     ->numeric(),
+
                // Forms\Components\TextInput::make('stock_balance_at_sale')
                    // ->required()
                     //->numeric()
@@ -117,7 +120,8 @@ class DepositorResource extends Resource
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: 1),
+                    ->label('Paid on')
+                    ->toggleable(isToggledHiddenByDefault: 0),
             ])
             ->filters([
                 //

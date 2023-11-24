@@ -55,6 +55,22 @@ class Depositor extends Model
                         $sale->update(['selling_price' => $newSellingPrice]);
                     });
                 }
+
+                // Calculate balance as selling_price - paid
+                $depositor->balance = $depositor->selling_price - $depositor->paid;
+            }
+        });
+
+        static::updating(function ($depositor) {
+            // Retrieve the associated item
+            $item = $depositor->item;
+
+            if ($item) {
+                // Recalculate selling_price if quantity is updated
+                $depositor->selling_price = $item->unitsp * $depositor->quantity;
+
+                // Recalculate balance as selling_price - paid
+                $depositor->balance = $depositor->selling_price - $depositor->paid;
             }
         });
     }

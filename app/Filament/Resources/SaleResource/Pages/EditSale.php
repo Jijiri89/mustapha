@@ -23,14 +23,16 @@ class EditSale extends EditRecord
     {
         return $this->getResource()::getUrl('index');
     }
-    
-    
+
+
     protected function getCreatedNotification(): ?Notification
     {
         return Notification::make()
             ->success()
-            ->title('Sales')
-            ->body('Edited successfully.');
+            ->title('deposit')
+            ->body('added successfully.');
     }
-   
+
+
+
 }
