@@ -2,7 +2,7 @@
     <nav class="fixed top-0 left-0 w-full bg-yellow-900 text-white py-4 z-10">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo or Branding (if needed) -->
-            <a href="#" class="flex items-center">
+            <a href="#" class="flex text-center">
                 <span class="text-white text-2xl mx-3 font-bold">JAZAKH-ALLAH VENTURES</span>
             </a>
 
