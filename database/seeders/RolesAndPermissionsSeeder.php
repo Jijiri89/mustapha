@@ -101,7 +101,7 @@ class RolesAndPermissionsSeeder extends Seeder
  User::create([
      'name' => 'super admin',
      'is_admin' => 1,
-     'email' => 'super@risingstar3.com',
+     'email' => 'super@jazakhallahventures.com',
      'email_verified_at' => now(),
      'password' => Hash::make('password'),
      'remember_token' => Str::random(10),
@@ -110,7 +110,7 @@ class RolesAndPermissionsSeeder extends Seeder
  User::create([
      'name' => 'admin',
      'is_admin' => 1,
-     'email' => 'admin@risingstar3.com',
+     'email' => 'admin@jazakhallahventures.com',
      'email_verified_at' => now(),
      'password' => Hash::make('password'),
      'remember_token' => Str::random(10),
@@ -119,7 +119,7 @@ class RolesAndPermissionsSeeder extends Seeder
  User::create([
      'name' => 'moderator',
      'is_admin' => 1,
-     'email' => 'moderator@risingstar3.com',
+     'email' => 'moderator@jazakhallahventures.com',
      'email_verified_at' => now(),
      'password' => Hash::make('password'),
      'remember_token' => Str::random(10),
@@ -128,7 +128,7 @@ class RolesAndPermissionsSeeder extends Seeder
  User::create([
      'name' => 'developer',
      'is_admin' => 1,
-     'email' => 'developer@risingstar3.com',
+     'email' => 'developer@jazakhallahventures.com',
      'email_verified_at' => now(),
      'password' => Hash::make('password'),
      'remember_token' => Str::random(10),
@@ -138,7 +138,7 @@ class RolesAndPermissionsSeeder extends Seeder
      User::create([
          'name' => 'Staff '.$i,
          'is_admin' => 0,
-         'email' => 'staff'.$i.'@risingstar3.com',
+         'email' => 'staff'.$i.'@jazakhallahventures.com',
          'email_verified_at' => now(),
          'password' => Hash::make('password'), // password
          'remember_token' => Str::random(10),

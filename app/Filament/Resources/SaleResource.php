@@ -24,7 +24,7 @@ use App\Filament\Resources\SaleResource\RelationManagers;
 
 class SaleResource extends Resource
 {
-    
+
     protected static ?string $model = Sale::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-currency-dollar';
@@ -66,14 +66,14 @@ class SaleResource extends Resource
                     ->maxLength(13),
                     Forms\Components\TextInput::make('remarks')
                     ->default('Thank You'),
-                   
-                    
+
+
             ])->columns(1);
     }
 
     public static function table(Table $table): Table
     {
-        
+
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('item.title')
@@ -85,7 +85,7 @@ class SaleResource extends Resource
                    TextColumn::make('item.stock_balance')
                      ->numeric()
                      ->label('Current Stock Balance'),
-               
+
                    TextColumn::make('stock_balance_at_sale')
                    ->numeric()
                    ->label('Stock Balance at the point of sale'),
@@ -94,31 +94,31 @@ class SaleResource extends Resource
                      ->money('GHS')
                      ->label('Unit Selling price')
                      ->sortable(),*/
-                    
+
                 Tables\Columns\TextColumn::make('quantity')
 
                     ->numeric()
                     ->label('Quantity sold out')
                     ->sortable(),
-                   
+
                 Tables\Columns\TextColumn::make('selling_price')
-               
-                
+
+
              ->icon('heroicon-m-calculator')
 
                 ->summarize(Sum::make()->money('GHS'))
                 ->numeric()
                 ->money('GHS')
                 ->sortable(),
-                
+
                 BooleanColumn::make('is_credit_sale')->sortable(),
 
                 TextColumn::make('profit_or_loss')
-                ->visible(in_array(auth()->user()->email, ['super@risingstar3.com', 'developer@risingstar3.com', 'more@example.com']))
+                ->visible(in_array(auth()->user()->email, ['super@rjazakhallahventures.com', 'developer@jazakhallahventures.com', 'more@example.com']))
                 ->money('GHS')
                 ->summarize(Sum::make()->money('GHS')->label('Total Profit '))
 
-                
+
                 ->label('Profit or Loss'),
 
 
@@ -137,18 +137,18 @@ class SaleResource extends Resource
                     ->searchable(),
                      TextColumn::make('remarks')
                      ->searchable(),
-                     
+
                 Tables\Columns\TextColumn::make('created_at')
                 //->format('d/m/Y')
-                 
+
                      ->label('Date of Sale')
                      ->icon('heroicon-m-calendar')
 
-                     
+
                     ->dateTime('D-d-M-Y H:i:s A')
                     ->sortable(),
                    // ->toggleable(isToggledHiddenByDefault: 0),
-                   
+
                 Tables\Columns\TextColumn::make('updated_at')
                 ->label('Edited date')
                      ->dateTime('D-d-M-Y H:i:s A')
@@ -157,7 +157,7 @@ class SaleResource extends Resource
             ])
             ->filters([
                 //
-                
+
                 Filter::make('created_at')
     ->form([
         DatePicker::make('created_from')
@@ -176,13 +176,13 @@ class SaleResource extends Resource
                 fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
             );
     })
-                
+
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
-                
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -190,14 +190,14 @@ class SaleResource extends Resource
                 ]),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -206,5 +206,5 @@ class SaleResource extends Resource
             'view' => Pages\ViewSale::route('/{record}'),
             'edit' => Pages\EditSale::route('/{record}/edit'),
         ];
-    }    
+    }
 }

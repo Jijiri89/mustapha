@@ -20,9 +20,9 @@ class User extends Authenticatable implements FilamentUser
     use HasApiTokens;
     use HasFactory;
     use HasRoles;
-    
+
     use Notifiable;
-    
+
     /**
      * The attributes that are mass assignable.
      *
@@ -77,6 +77,6 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return str_ends_with($this->email, '@risingstar3.com');// && $this->hasVerifiedEmail();
+        return str_ends_with($this->email, '@jazakhallahventures.com');// && $this->hasVerifiedEmail();
     }
 }
