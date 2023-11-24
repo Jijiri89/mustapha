@@ -82,13 +82,13 @@ class SaleResource extends Resource
                     ->numeric()
                     ->sortable(),
                    // Tables\Columns\TextColumn::make('item.stock_balance')
-                   TextColumn::make('item.stock_balance')
-                     ->numeric()
-                     ->label('Current Stock Balance'),
+                  // TextColumn::make('item.stock_balance')
+                    // ->numeric()
+                     //->label('Current Stock Balance'),
 
                    TextColumn::make('stock_balance_at_sale')
                    ->numeric()
-                   ->label('Stock Balance at the point of sale'),
+                   ->label('Stock Balance'),
                    /*  Tables\Columns\TextColumn::make('item.unitsp')
                      ->numeric()
                      ->money('GHS')

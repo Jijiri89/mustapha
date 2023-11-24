@@ -15,6 +15,8 @@ class Depositor extends Model
     protected $fillable = [
         'item_id',
         'user_id',
+        'paid',
+        'balance',
         'remarks',
         'buyer_name',
         'quantity',

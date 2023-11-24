@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\Summarizers\Sum;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -32,26 +33,32 @@ class DepositorResource extends Resource
                     ->required(),
                 Forms\Components\Select::make('user_id')
                     ->relationship('user', 'name')
+                    ->label('Staff in charge')
                     ->required(),
                 Forms\Components\TextInput::make('buyer_name')
-                    ->maxLength(255),
+                    ->label('Supplier name'),
+                Forms\Components\Select::make('item_id')
+                    ->relationship('item', 'unitcp')
+                    ->label('Unit cost Price')
+                    ->required(),
                 Forms\Components\TextInput::make('quantity')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('selling_price')
+                Forms\Components\TextInput::make('paid')
                     ->numeric(),
-                Forms\Components\TextInput::make('stock_balance_at_sale')
-                    ->required()
-                    ->numeric()
-                    ->default(0.00),
+               // Forms\Components\TextInput::make('stock_balance_at_sale')
+                   // ->required()
+                    //->numeric()
+                   // ->default(0.00),
                 Forms\Components\TextInput::make('phone_number')
                     ->tel()
+                    ->label('Supply tel')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('remarks')
                     ->required()
                     ->maxLength(255)
                     ->default('Deposit'),
-            ]);
+            ])->columns(1);
     }
 
     public static function table(Table $table): Table
@@ -63,18 +70,41 @@ class DepositorResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
+                    ->label('Staff in charge')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('buyer_name')
+                    ->label('Supplier name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('quantity')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('selling_price')
+                    ->label(' Amount')
                     ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('stock_balance_at_sale')
+                    ->money('GHS')
+                    ->sortable()
+            ->summarize(Sum::make()->label('Total Amount supplied')->money('GHS'))
+            ->numeric()
+            ->money('GHS'),
+                Tables\Columns\TextColumn::make('paid')
+                    ->label(' Amount paid to supplier')
                     ->numeric()
-                    ->sortable(),
+                    ->money('GHS')
+                    ->sortable()
+                    ->summarize(Sum::make()->label('Total paid')->money('GHS'))
+                    ->numeric()
+                    ->money('GHS'),
+                Tables\Columns\TextColumn::make('balance')
+                    ->label(' Balance left to pay')
+                    ->numeric()
+                    ->money('GHS')
+                    ->sortable()
+                    ->summarize(Sum::make()->label('Total balance left to pay')->money('GHS'))
+                    ->numeric()
+                    ->money('GHS'),
+               // Tables\Columns\TextColumn::make('stock_balance_at_sale')
+                   // ->numeric()
+                   // ->sortable(),
                 Tables\Columns\TextColumn::make('phone_number')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('remarks')
@@ -82,11 +112,12 @@ class DepositorResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->label('deposited on')
+                    ->toggleable(isToggledHiddenByDefault: 0),
                 Tables\Columns\TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->toggleable(isToggledHiddenByDefault: 1),
             ])
             ->filters([
                 //

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('buyer_name')->nullable();
             $table->float('quantity');
             $table->float('selling_price')->nullable();
+            $table->float('paid')->nullable();
+            $table->float('balance')->virtualAs('selling_price -paid')->nullable();
             $table->decimal('stock_balance_at_sale', 10, 2)->default(0.00);
             $table->string('phone_number')->nullable();
             $table->string('remarks')->default('Deposit');

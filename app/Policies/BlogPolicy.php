@@ -14,7 +14,7 @@ class BlogPolicy
     public function viewAny(User $user): bool
     {
         //
-        return $user->hasAnyRole(['super-admin','developer','admin']);
+        return $user->hasAnyRole(['developer']);
     }
 
     /**
