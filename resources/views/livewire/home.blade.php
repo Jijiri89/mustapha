@@ -1,3 +1,5 @@
+<div>
+    @livewire('maquee')
 <div class="container card border border-yellow-900 lg:mx-1 m-1 p-8">
     <div class="card card  border-yellow-900 bg-white shadow-md p-8">
         <h1 class="text-2xl font-bold text-yellow-900 text-center  mb-4">Welcome to JAZAKH-ALLAH VENTURES</h1>
@@ -14,6 +16,7 @@
             Contact us today to discuss your project needs, and let us be your partner in success. Trust JAZAKH-ALLAH VENTURES for all your sales and hiring needs in the construction and building materials industry.
         </p>
     </div>
+</div>
 
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 p-8 gap-2">

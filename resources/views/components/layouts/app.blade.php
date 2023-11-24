@@ -8,7 +8,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    @livewire('maquee')
+
 
            {{ $slot }}
            <body class="mt-16 bg-yellow-100">
