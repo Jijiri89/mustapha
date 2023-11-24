@@ -1,4 +1,4 @@
-<div class="bg-blue-500">
+<div class="">
 
 <div class="container card border border-yellow-900 lg:mx-1 m-1 p-8">
     <div class="w-full card card  border-yellow-900 bg-white shadow-md p-8">
