@@ -1,31 +1,17 @@
-<div>
-    <div class="container mx-auto mt-8 px-4">
-        <div class="card border border-yellow-900 lg:mx-1 m-1 p-8">
-            <div class="w-full  card border-yellow-900 bg-white shadow-md p-8">
-                <h2 class="text-2xl font-semibold text-yellow-800 mb-4">Terms and Conditions</h2>
+<div class="container card border border-yellow-900 lg:mx-1 m-1 p-8">
+    <div class="w-full card card  border-yellow-900 bg-white shadow-md p-8">
+        <h1 class="text-2xl font-bold text-yellow-900 text-center  mb-4">Welcome to JAZAKH-ALLAH VENTURES</h1>
 
-                <p class="whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>WhatsApp:</strong> 0245631300</p>
-                <p class="whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>Telephone:</strong> 0207787847 / 0245631300</p>
-                <p class="whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>Email:</strong> seidumustaphastoph@gmail.com</p>
+        <p class="text-lg text-blue-800 leading-loose">
+            JAZAKH-ALLAH VENTURES is your trusted partner for all your construction needs. We specialize in the sales and hiring of top-quality machines and a wide range of building materials. Whether you are planning a small DIY project or undertaking a large-scale construction endeavor, we have the tools and materials you need to bring your vision to life.
+        </p>
 
-                <p class="mt-4 whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>Service Overview:</strong>
-                    JAZAKH-ALLAH VENTURES provides innovative solutions and services to meet your needs.</p>
+        <p class="text-lg text-blue-800 leading-loose mt-4">
+            Our commitment to excellence, reliability, and customer satisfaction sets us apart in the industry. Explore our extensive inventory of construction machinery and high-quality building materials to ensure the success of your projects. At JAZAKH-ALLAH VENTURES, we are dedicated to providing you with the best solutions for your construction requirements.
+        </p>
 
-                <p class="mt-4 whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>Mobile Menu:</strong>
-                    Our mobile menu is accessible by clicking the "Hamburger Icon" (three horizontal lines) on the top-right corner of our website. It provides quick access to Home, About, Services, and Contact links.</p>
-
-                <!-- Add more terms and conditions as needed -->
-
-                <p class="mt-4 whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>Contacting Us:</strong>
-                    For inquiries or assistance, feel free to reach out to us through WhatsApp, telephone, or email.</p>
-
-                <!-- Add more sections as needed -->
-
-                <p class="mt-4 whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>Acceptance of Terms:</strong>
-                    By using our services, you agree to abide by these terms and conditions.</p>
-
-                <p class="mt-8">Thank you for choosing JAZAKH-ALLAH VENTURES. We look forward to serving you.</p>
-            </div>
-        </div>
+        <p class="text-lg text-blue-800 leading-loose mt-4">
+            Contact us today to discuss your project needs, and let us be your partner in success. Trust JAZAKH-ALLAH VENTURES for all your sales and hiring needs in the construction and building materials industry.
+        </p>
     </div>
 </div>
