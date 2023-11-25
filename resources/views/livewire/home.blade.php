@@ -19,7 +19,7 @@
 </div>
 
 
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 p-8 gap-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-8 gap-2">
             <!-- Loop through images with names -->
             @foreach(['cement' => 'Cement', 'ma' => 'Road constructions', 'momo' => 'Mobile Money transfer', 'mach1' => 'Machines', 'petrol' => 'petrol', 'pet' => 'Fuel for sale', 'wel' => 'Wheel barrows', 'wel2' => 'Rentals', 'li' => 'Cement'] as $imageName => $imageCaption)
                 <div class="flex text-blue-500 flex-col items-center mb-4">
