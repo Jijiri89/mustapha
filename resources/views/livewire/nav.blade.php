@@ -23,23 +23,26 @@
                         Menu
                     </button>
                     <div
+
                         class="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg hidden"
                         id="mobile-menu-dropdown-content"
                     >
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">About</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Login</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</a>
+
+                        <a href="/"  class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
+                        <a href="/admin"  class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Login</a>
+                        <a href="about" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">About</a>
+
+                        <a href="contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Contact</a>
                     </div>
                 </div>
             </div>
 
             <!-- Desktop Menu (visible on larger screens) -->
             <div class="hidden lg:flex space-x-4">
-                <a href="#" class="text-white hover:text-green-500 transition duration-300">Home</a>
-                <a href="#" class="text-white hover:text-green-500 transition duration-300">About</a>
-                <a href="#" class="text-white hover:text-green-500 transition duration-300">Login</a>
-                <a href="#" class="text-white hover:text-green-500 transition duration-300">Contact</a>
+                <a href="/" class="text-white hover:text-green-500 transition duration-300">Home</a>
+                <a href="/admin" class="text-white hover:text-green-500 transition duration-300">Login</a>
+                <a href="about" class="text-white hover:text-green-500 transition duration-300">About</a>
+                <a href="contact" class="text-white hover:text-green-500 transition duration-300">Contact</a>
             </div>
         </div>
     </nav>

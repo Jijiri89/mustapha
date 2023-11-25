@@ -7,6 +7,7 @@
         <div class="text-center">
             <p>&copy; {{ date('Y') }} JAZAKH-ALLAH VENTURES</p>
             <p>All rights reserved.</p>
+            <a href="terms" class="block px-4 py-2 text-white hover:bg-gray-200">Terms and conditions</a>
         </div>
     </footer>
 </div>

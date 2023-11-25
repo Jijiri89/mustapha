@@ -6,10 +6,12 @@ use App\Filament\Resources\DepositorResource\Pages;
 use App\Filament\Resources\DepositorResource\RelationManagers;
 use App\Models\Depositor;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\Summarizers\Sum;
+use Filament\Tables\Filters\Filter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -125,6 +127,25 @@ class DepositorResource extends Resource
             ])
             ->filters([
                 //
+                Filter::make('created_at')
+                    ->form([
+                        DatePicker::make('created_from')
+                            ->label('Kindly Specify start date'),
+                        DatePicker::make('created_until')
+                            ->label('Kindly Specify End date'),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['created_from'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('created_at', '>=', $date),
+                            )
+                            ->when(
+                                $data['created_until'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('created_at', '<=', $date),
+                            );
+                    })
+
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

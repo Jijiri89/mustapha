@@ -6,6 +6,9 @@ use App\Http\Controllers\ProfileController;
 use App\Livewire\Home;
 
 Route::get('/',Home::class)->name('home');
+Route::get('/terms',\App\Livewire\Term::class)->name('term');
+Route::get('/about',\App\Livewire\About::class)->name('about');
+Route::get('/contact',\App\Livewire\Contact::class)->name('contact');
 
 
 

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\CreditSale;
 use App\Models\Sale;
 use App\Models\Depositor;
-use App\Models\CreditSale;
+use App\Models\Rental;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -30,6 +31,10 @@ class Item extends Model
     public function creditsales():HasMany
     {
         return $this->hasMany(CreditSale::class);
+    }
+    public function rentals():HasMany
+    {
+        return $this->hasMany(Rental::class);
     }
 
     public function depositors():HasMany
