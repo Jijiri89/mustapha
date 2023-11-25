@@ -1,5 +1,5 @@
 <div class="container card border border-yellow-900 lg:mx-1 m-1 p-8">
-    <div class="w-full card card  border-yellow-900 bg-white shadow-md p-8">
+    <div class="card card border-yellow-900 bg-white shadow-md p-8">
         <h1 class="text-2xl font-bold text-yellow-900 text-center mb-4">Terms and Conditions</h1>
 
         <p class="text-lg text-blue-800 leading-loose">
