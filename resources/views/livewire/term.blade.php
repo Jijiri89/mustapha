@@ -1,7 +1,7 @@
 <div>
     <div class="container mx-auto mt-8 px-4">
         <div class="card border border-yellow-900 lg:mx-1 m-1 p-8">
-            <div class="w-full card card border-yellow-900 bg-white shadow-md p-8">
+            <div class="w-full  card border-yellow-900 bg-white shadow-md p-8">
                 <h2 class="text-2xl font-semibold text-yellow-800 mb-4">Terms and Conditions</h2>
 
                 <p class="whitespace-normal leading-normal sm:whitespace-pre-line sm:leading-pre-line md:whitespace-pre-line md:leading-pre-line"><strong>WhatsApp:</strong> 0245631300</p>
